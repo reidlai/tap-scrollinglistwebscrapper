@@ -1,0 +1,5 @@
+default_context:
+  admin_name: Reid LAI
+  admin_email: reidlai@gmail.com
+  stream_type: Custom
+  auth_method: None

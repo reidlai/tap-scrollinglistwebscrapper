@@ -55,4 +55,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 # CLI declaration
-tap-scrollinglistwebscrapper = 'tap_scrollinglistwebscrapper.tap:Tapscrollinglistwebscrapper.cli'
+tap-scrollinglistwebscrapper = 'tap_scrollinglistwebscrapper.tap:TapScrollingListWebScrapper.cli'
