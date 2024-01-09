@@ -11,7 +11,6 @@ SAMPLE_CONFIG = {
     "itemSelector": "div[class^='item-root']"
 }
 
-
 # Run standard built-in tap tests from the SDK:
 TestTapScrollingListWebScrapper = get_tap_test_class(
     tap_class=TapScrollingListWebScrapper,
