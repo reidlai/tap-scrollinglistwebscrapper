@@ -1,4 +1,3 @@
-
 from singer_sdk.testing import get_tap_test_class
 
 from tap_scrollinglistwebscrapper.tap import TapScrollingListWebScrapper

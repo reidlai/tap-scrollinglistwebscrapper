@@ -2,6 +2,7 @@ from __future__ import annotations
 from singer_sdk import Tap
 from singer_sdk import typing as th
 from tap_scrollinglistwebscrapper import streams
+from typing import List
 
 class TapScrollingListWebScrapper(Tap):
     name = "tap-scrollinglistwebscrapper"
@@ -13,8 +14,8 @@ class TapScrollingListWebScrapper(Tap):
         th.Property("itemSelector", th.StringType, description="The selector for the items in the list"),
     ).to_dict()
 
-    def discover_streams(self) -> list[streams.ScrollingListWebScrapperStream]:
-        return [streams.GenericHTMLStringStream(self)]
+    def discover_streams(self) -> List[streams.ScrollingListWebScrapperStream]:
+        return [streams.HTMLStringItemsStream(self)]
 
 if __name__ == "__main__":
     TapScrollingListWebScrapper.cli()

@@ -1,5 +1,7 @@
 from __future__ import annotations
 from tap_scrollinglistwebscrapper.client import ScrollingListWebScrapperStream
 
-class GenericHTMLStringStream(ScrollingListWebScrapperStream):
-    name = "list_content"
+class HTMLStringItemsStream(ScrollingListWebScrapperStream):
+    path = "/htmlStringItems"
+    name = "htmlStringItems"
+    
