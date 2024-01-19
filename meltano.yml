@@ -8,23 +8,25 @@ plugins:
   extractors:
   - name: "tap-scrollinglistwebscrapper"
     namespace: "tap_scrollinglistwebscrapper"
-    pip_url: -e .
+    pip_url: "github.com/reidlai/tap-scrollinglistwebscrapper"
     capabilities:
-    - state
-    - catalog
-    - discover
-    - about
-    - stream-maps
-    config:
-      start_date: '2010-01-01T00:00:00Z'
+      - state
+      - catalog
+      - discover
+      - about
+      - stream-maps
     settings:
-    # TODO: To configure using Meltano, declare settings and their types here:
-    - name: username
-    - name: password
-      kind: password
-    - name: start_date
-      value: '2010-01-01T00:00:00Z'
+        - name: url
+          kind: string
+        - name: browserTimeoutSeconds
+          kind: integer
+        - name: scrollWaitSeconds
+          kind: integer
+        - name: endOfListSelector
+          kind: string
+        - name: itemSelector
+          kind: string
   loaders:
-  - name: target-jsonl
-    variant: andyh1203
-    pip_url: target-jsonl
+    - name: target-jsonl
+      variant: andyh1203
+      pip_url: target-jsonl
